@@ -7,7 +7,7 @@
 }
 
 body{
-    background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(75,14,154,1) 35%, rgba(0,212,255,1) 100%);
+    background-color:#617050;
     font-family: 'Poppins', sans-serif;
 }
 
@@ -33,9 +33,11 @@ form{
     border-bottom: 1px solid;
     border-radius: 4px 4px 0 0;
 }
-h4{
-    font-size: 2rem !important;
+h4{ 
+    background-image:url(blob:https://app.logo.com/744f8547-3aa2-4293-b423-2d9512bec198) ;
+    font-size: 2rem;
     font-weight: 700;
+    color: rgb(129, 175, 61);
 }
 .form-label{
     font-family: 800 !important;
