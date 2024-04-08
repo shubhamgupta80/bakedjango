@@ -1,0 +1,48 @@
+{% extends 'layout/base.html' %}
+{% load static %}
+{% block title %}about us{% endblock %}
+{% block content %}
+<section id="about" class="about my-5">
+  <div class="container" data-aos="fade-up">
+
+    <div class="section-header">
+      <h2>About Us</h2>
+      <p> <span>Healthy Produce</span></p>
+    </div>
+
+    <div class="row gy-4">
+      <div class="col-lg-7 position-relative about-img"
+        style="background-image: url(https://cdn.pixabay.com/photo/2016/07/16/20/48/peaches-1522680_640.jpg) ;"
+        data-aos="fade-up" data-aos-delay="100">
+
+      </div>
+      <div class="col-lg-5 d-flex align-items-end" data-aos="fade-up" data-aos-delay="300">
+        <div class="content ps-0 ps-lg-5">
+          <p class="fst-italic">
+            A sustainable solution, cultivating fresh, nutrient-rich produce within city limits, promoting healthier
+            diets and communities."
+          </p>
+          <ul>
+            <li><i class="bi bi-check2-all"></i> Fresh and locally grown: Urban farming provides access to fresh produce
+              that is harvested nearby, minimizing transportation and preserving nutrients.</li>
+            <li><i class="bi bi-check2-all"></i> Organic and pesticide-free: Many urban farming practices prioritize
+              organic methods, ensuring that the food grown is free from harmful chemicals, promoting healthier eating
+              choices.</li>
+            <li><i class="bi bi-check2-all"></i> Diverse and nutritious: Urban farming encourages the cultivation of a
+              variety of fruits, vegetables, and herbs, offering a diverse range of nutrient-rich foods that contribute
+              to balanced diets and overall well-being.</li>
+          </ul>
+
+          <div class="position-relative mt-4">
+            <img src="https://cdn.pixabay.com/photo/2016/11/08/05/35/agriculture-1807549_1280.jpg" class="img-fluid"
+              alt="">
+            <a href="https://www.youtube.com/watch?v=LGF33NN4B8U&pp=ygUvdXJiYW4gZmFybWluZyBmcmVzaCBmcnVpdHMgZGV0YWlscyBpbiBkaXNjb3Zlcnk%3D"
+              class="glightbox play-btn"></a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section><!-- End About Section -->
+{% endblock %}
