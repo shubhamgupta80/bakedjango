@@ -1,0 +1,27 @@
+<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
+
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
+
+{% if messages %}
+{% for message in messages %}
+
+<script>
+    Toastify({
+  text: "{{ message }}",
+  duration: 3000,
+  close: true,
+  gravity: "top", // `top` or `bottom`
+  position: "center", // `left`, `center` or `right`
+  stopOnFocus: true, // Prevents dismissing of toast on hover
+  style: {
+    background: "#d54245",
+
+  },
+  offset:{
+    x: 10,
+    y: 20,
+  }
+}).showToast();
+</script>
+{% endfor %}
+{% endif %}

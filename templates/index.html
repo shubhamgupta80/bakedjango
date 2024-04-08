@@ -1,4 +1,4 @@
-{% load  static %}
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
 
@@ -6,7 +6,13 @@
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
-  <title>EstateAgency Bootstrap Template - Index</title>
+  <title>
+    
+    {% block title %}
+        Baked Django - Django
+    {% endblock title %}
+        
+  </title>
   <meta content="" name="description">
   <meta content="" name="keywords">
 
@@ -15,1129 +21,384 @@
   <link href="/static/img/apple-touch-icon.png" rel="apple-touch-icon">
 
   <!-- Google Fonts -->
-  <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,600;1,700&family=Amatic+SC:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Inter:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
 
   <!-- Vendor CSS Files -->
-  <link href="/static/vendor/animate.css/animate.min.css" rel="stylesheet">
   <link href="/static/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
   <link href="/static/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="/static/vendor/aos/aos.css" rel="stylesheet">
+  <link href="/static/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
   <link href="/static/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
 
   <!-- Template Main CSS File -->
-  <link href="/static/css/style.css" rel="stylesheet">
+  <link href="/static/css/main.css" rel="stylesheet">
 
   <!-- =======================================================
-  * Template Name: EstateAgency
-  * Template URL: https://bootstrapmade.com/real-estate-agency-bootstrap-template/
+  * Template Name: Yummy
+  * Template URL: https://bootstrapmade.com/yummy-bootstrap-restaurant-website-template/
   * Updated: Mar 17 2024 with Bootstrap v5.3.3
   * Author: BootstrapMade.com
   * License: https://bootstrapmade.com/license/
   ======================================================== -->
+  
+  {% block css %}
+    
+  {% endblock css %}
+    
 </head>
 
 <body>
+    {% include 'components/header.html' %}
+    <main id="main">
+        
+        {% block content %}
+            
+        {% endblock  %}
+            
+    </main>
+    
+    {% include 'components/header.html' %}
 
-  <!-- ======= Property Search Section ======= -->
-  <div class="click-closed"></div>
-  <!--/ Form Search Star /-->
-  <div class="box-collapse">
-    <div class="title-box-d">
-      <h3 class="title-d">Search Property</h3>
-    </div>
-    <span class="close-box-collapse right-boxed bi bi-x"></span>
-    <div class="box-collapse-wrap form">
-      <form class="form-a">
-        <div class="row">
-          <div class="col-md-12 mb-2">
-            <div class="form-group">
-              <label class="pb-2" for="Type">Keyword</label>
-              <input type="text" class="form-control form-control-lg form-control-a" placeholder="Keyword">
-            </div>
-          </div>
-          <div class="col-md-6 mb-2">
-            <div class="form-group mt-3">
-              <label class="pb-2" for="Type">Type</label>
-              <select class="form-control form-select form-control-a" id="Type">
-                <option>All Type</option>
-                <option>For Rent</option>
-                <option>For Sale</option>
-                <option>Open House</option>
-              </select>
-            </div>
-          </div>
-          <div class="col-md-6 mb-2">
-            <div class="form-group mt-3">
-              <label class="pb-2" for="city">City</label>
-              <select class="form-control form-select form-control-a" id="city">
-                <option>All City</option>
-                <option>Alabama</option>
-                <option>Arizona</option>
-                <option>California</option>
-                <option>Colorado</option>
-              </select>
-            </div>
-          </div>
-          <div class="col-md-6 mb-2">
-            <div class="form-group mt-3">
-              <label class="pb-2" for="bedrooms">Bedrooms</label>
-              <select class="form-control form-select form-control-a" id="bedrooms">
-                <option>Any</option>
-                <option>01</option>
-                <option>02</option>
-                <option>03</option>
-              </select>
-            </div>
-          </div>
-          <div class="col-md-6 mb-2">
-            <div class="form-group mt-3">
-              <label class="pb-2" for="garages">Garages</label>
-              <select class="form-control form-select form-control-a" id="garages">
-                <option>Any</option>
-                <option>01</option>
-                <option>02</option>
-                <option>03</option>
-                <option>04</option>
-              </select>
-            </div>
-          </div>
-          <div class="col-md-6 mb-2">
-            <div class="form-group mt-3">
-              <label class="pb-2" for="bathrooms">Bathrooms</label>
-              <select class="form-control form-select form-control-a" id="bathrooms">
-                <option>Any</option>
-                <option>01</option>
-                <option>02</option>
-                <option>03</option>
-              </select>
-            </div>
-          </div>
-          <div class="col-md-6 mb-2">
-            <div class="form-group mt-3">
-              <label class="pb-2" for="price">Min Price</label>
-              <select class="form-control form-select form-control-a" id="price">
-                <option>Unlimite</option>
-                <option>$50,000</option>
-                <option>$100,000</option>
-                <option>$150,000</option>
-                <option>$200,000</option>
-              </select>
-            </div>
-          </div>
-          <div class="col-md-12">
-            <button type="submit" class="btn btn-b">Search Property</button>
-          </div>
-        </div>
-      </form>
-    </div>
-  </div><!-- End Property Search Section -->>
+  <!-- ======= Header ======= -->
+ 
 
-  <!-- ======= Header/Navbar ======= -->
-  <nav class="navbar navbar-default navbar-trans navbar-expand-lg fixed-top">
+  <!-- ======= Hero Section ======= -->
+  <section id="hero" class="hero d-flex align-items-center section-bg">
     <div class="container">
-      <button class="navbar-toggler collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#navbarDefault" aria-controls="navbarDefault" aria-expanded="false" aria-label="Toggle navigation">
-        <span></span>
-        <span></span>
-        <span></span>
-      </button>
-      <a class="navbar-brand text-brand" href="index.html">Estate<span class="color-b">Agency</span></a>
-
-      <div class="navbar-collapse collapse justify-content-center" id="navbarDefault">
-        <ul class="navbar-nav">
-
-          <li class="nav-item">
-            <a class="nav-link active" href="index.html">Home</a>
-          </li>
-
-          <li class="nav-item">
-            <a class="nav-link " href="about.html">About</a>
-          </li>
-
-          <li class="nav-item">
-            <a class="nav-link " href="property-grid.html">Property</a>
-          </li>
-
-          <li class="nav-item">
-            <a class="nav-link " href="blog-grid.html">Blog</a>
-          </li>
-
-          <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Pages</a>
-            <div class="dropdown-menu">
-              <a class="dropdown-item " href="property-single.html">Property Single</a>
-              <a class="dropdown-item " href="blog-single.html">Blog Single</a>
-              <a class="dropdown-item " href="agents-grid.html">Agents Grid</a>
-              <a class="dropdown-item " href="agent-single.html">Agent Single</a>
-            </div>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link " href="contact.html">Contact</a>
-          </li>
-        </ul>
-      </div>
-
-      <button type="button" class="btn btn-b-n navbar-toggle-box navbar-toggle-box-collapse" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo01">
-        <i class="bi bi-search"></i>
-      </button>
-
-    </div>
-  </nav><!-- End Header/Navbar -->
-
-  <!-- ======= Intro Section ======= -->
-  <div class="intro intro-carousel swiper position-relative">
-
-    <div class="swiper-wrapper">
-
-      <div class="swiper-slide carousel-item-a intro-item bg-image" style="background-image: url(/static/img/slide-1.jpg)">
-        <div class="overlay overlay-a"></div>
-        <div class="intro-content display-table">
-          <div class="table-cell">
-            <div class="container">
-              <div class="row">
-                <div class="col-lg-8">
-                  <div class="intro-body">
-                    <p class="intro-title-top">Doral, Florida
-                      <br> 78345
-                    </p>
-                    <h1 class="intro-title mb-4 ">
-                      <span class="color-b">204 </span> Mount
-                      <br> Olive Road Two
-                    </h1>
-                    <p class="intro-subtitle intro-price">
-                      <a href="#"><span class="price-a">rent | $ 12.000</span></a>
-                    </p>
-                  </div>
-                </div>
-              </div>
-            </div>
+      <div class="row justify-content-between gy-5">
+        <div class="col-lg-5 order-2 order-lg-1 d-flex flex-column justify-content-center align-items-center align-items-lg-start text-center text-lg-start">
+          <h2 data-aos="fade-up">Welcome to<br> Urban Micro Platform</h2>
+          <p data-aos="fade-up" data-aos-delay="100">Cultivating sustainability from city streets to rooftop retreats</p>
+          <div class="d-flex" data-aos="fade-up" data-aos-delay="200">
+           
+            <a href="https://www.youtube.com/watch?v=ckeXvykKe9A&pp=ygUNdXJiYW4gZmFybWluZw%3D%3D" class="glightbox btn-watch-video d-flex align-items-center"><i class="bi bi-play-circle"></i><span>Watch Video</span></a>
           </div>
         </div>
-      </div>
-      <div class="swiper-slide carousel-item-a intro-item bg-image" style="background-image: url(/static/img/slide-2.jpg)">
-        <div class="overlay overlay-a"></div>
-        <div class="intro-content display-table">
-          <div class="table-cell">
-            <div class="container">
-              <div class="row">
-                <div class="col-lg-8">
-                  <div class="intro-body">
-                    <p class="intro-title-top">Doral, Florida
-                      <br> 78345
-                    </p>
-                    <h1 class="intro-title mb-4">
-                      <span class="color-b">204 </span> Rino
-                      <br> Venda Road Five
-                    </h1>
-                    <p class="intro-subtitle intro-price">
-                      <a href="#"><span class="price-a">rent | $ 12.000</span></a>
-                    </p>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="swiper-slide carousel-item-a intro-item bg-image" style="background-image: url(/static/img/slide-3.jpg)">
-        <div class="overlay overlay-a"></div>
-        <div class="intro-content display-table">
-          <div class="table-cell">
-            <div class="container">
-              <div class="row">
-                <div class="col-lg-8">
-                  <div class="intro-body">
-                    <p class="intro-title-top">Doral, Florida
-                      <br> 78345
-                    </p>
-                    <h1 class="intro-title mb-4">
-                      <span class="color-b">204 </span> Alira
-                      <br> Roan Road One
-                    </h1>
-                    <p class="intro-subtitle intro-price">
-                      <a href="#"><span class="price-a">rent | $ 12.000</span></a>
-                    </p>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
+        <div class="col-lg-5 order-1 order-lg-2 text-center text-lg-start">
+          <img src="https://cdn.pixabay.com/photo/2018/03/21/16/05/greenhouse-3247181_640.jpg" class="img-fluid" alt="" data-aos="zoom-out" data-aos-delay="300">
         </div>
       </div>
     </div>
-    <div class="swiper-pagination"></div>
-  </div><!-- End Intro Section -->
+  </section><!-- End Hero Section -->
 
   <main id="main">
 
-    <!-- ======= Services Section ======= -->
-    <section class="section-services section-t8">
-      <div class="container">
-        <div class="row">
-          <div class="col-md-12">
-            <div class="title-wrap d-flex justify-content-between">
-              <div class="title-box">
-                <h2 class="title-a">Our Services</h2>
+    <!-- ======= About Section ======= -->
+    
+
+    <!-- ======= Why Us Section ======= -->
+    <section id="why-us" class="why-us section-bg">
+      <div class="container" data-aos="fade-up">
+
+        <div class="row gy-4">
+
+          <div class="col-lg-4" data-aos="fade-up" data-aos-delay="100">
+            <div class="why-box">
+              <h3>Why Choose Urban Micro Farming?</h3>
+              <p>
+                Urban micro-farming is a strategic choice for urban dwellers looking to cultivate their own fresh produce within limited spaces. By utilizing innovative techniques like vertical gardening, rooftop gardens, and hydroponics, micro-farming maximizes space efficiency while minimizing environmental impact. Beyond providing access to nutritious food, it fosters community engagement and education, empowering individuals to take control of their food sources and contribute to local resilience. In a world facing challenges like food insecurity and climate change, urban micro-farming offers a sustainable and practical solution that not only nourishes bodies but also strengthens communities and enhances urban environments.
+              </p>
+              <div class="text-center">
+                <a href="#" class="more-btn">Learn More <i class="bx bx-chevron-right"></i></a>
               </div>
             </div>
+          </div><!-- End Why Box -->
+
+          <div class="col-lg-8 d-flex align-items-center">
+            <div class="row gy-4">
+
+              <div class="col-xl-4" data-aos="fade-up" data-aos-delay="200">
+                <div class="icon-box d-flex flex-column justify-content-center align-items-center">
+                  <i class="bi bi-clipboard-data"></i>
+                  <h4>Local Food Production</h4>
+                  <p>Urban farming allows for the production of food within or near urban areas, reducing the distance food needs to travel from farm to table. </p>
+                </div>
+              </div><!-- End Icon Box -->
+
+              <div class="col-xl-4" data-aos="fade-up" data-aos-delay="300">
+                <div class="icon-box d-flex flex-column justify-content-center align-items-center">
+                  <i class="bi bi-gem"></i>
+                  <h4>Resource Efficiency</h4>
+                  <p> Urban farming maximizes the efficient use of limited urban space by repurposing rooftops, vacant lots, and other underutilized areas for agricultural purposes. </p>
+                </div>
+              </div><!-- End Icon Box -->
+
+              <div class="col-xl-4" data-aos="fade-up" data-aos-delay="400">
+                <div class="icon-box d-flex flex-column justify-content-center align-items-center">
+                  <i class="bi bi-inboxes"></i>
+                  <h4>Community Engagement and Health Benefits</h4>
+                  <p>Urban farming fosters community engagement by bringing people together to cultivate and share fresh, locally grown produce. </p>
+                </div>
+              </div><!-- End Icon Box -->
+
+            </div>
           </div>
+
         </div>
-        <div class="row">
-          <div class="col-md-4">
-            <div class="card-box-c foo">
-              <div class="card-header-c d-flex">
-                <div class="card-box-ico">
-                  <span class="bi bi-cart"></span>
-                </div>
-                <div class="card-title-c align-self-center">
-                  <h2 class="title-c">Lifestyle</h2>
-                </div>
-              </div>
-              <div class="card-body-c">
-                <p class="content-c">
-                  Sed porttitor lectus nibh. Cras ultricies ligula sed magna dictum porta. Praesent sapien massa,
-                  convallis a pellentesque
-                  nec, egestas non nisi.
+
+      </div>
+    </section><!-- End Why Us Section -->
+
+    <!-- ======= Stats Counter Section ======= -->
+    <section id="stats-counter" class="stats-counter">
+      <div class="container" data-aos="zoom-out">
+      </div>
+    </div>
+    </section><!-- End Stats Counter Section -->
+
+    <!-- ======= Menu Section ======= -->
+    <section id="menu" class="menu">
+      <div class="container" data-aos="fade-up">
+
+        <div class="section-header">
+          <h2>Our Menu</h2>
+          <p>Check Our <span>Farming Tools</span></p>
+        </div>
+
+        <ul class="nav nav-tabs d-flex justify-content-center" data-aos="fade-up" data-aos-delay="200">
+       </ul>
+        <div class="tab-content" data-aos="fade-up" data-aos-delay="300">
+
+          <div class="tab-pane fade active show" id="menu-starters">
+
+            <div class="tab-header text-center">
+              <h3>Starters</h3>
+            </div>
+
+            <div class="row gy-5">
+
+              <div class="col-lg-4 menu-item">
+                <a href="https://images.pexels.com/photos/6231726/pexels-photo-6231726.jpeg?auto=compress&cs=tinysrgb&w=600" class="glightbox"><img src="https://images.pexels.com/photos/6231726/pexels-photo-6231726.jpeg?auto=compress&cs=tinysrgb&w=600" class="menu-img img-fluid" alt=""></a>
+                <h4>Hand Tool</h4>
+                <p class="price">
+                  Rs.199
                 </p>
-              </div>
-              <div class="card-footer-c">
-                <a href="#" class="link-c link-icon">Read more
-                  <span class="bi bi-chevron-right"></span>
-                </a>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-4">
-            <div class="card-box-c foo">
-              <div class="card-header-c d-flex">
-                <div class="card-box-ico">
-                  <span class="bi bi-calendar4-week"></span>
-                </div>
-                <div class="card-title-c align-self-center">
-                  <h2 class="title-c">Loans</h2>
-                </div>
-              </div>
-              <div class="card-body-c">
-                <p class="content-c">
-                  Nulla porttitor accumsan tincidunt. Curabitur aliquet quam id dui posuere blandit. Mauris blandit
-                  aliquet elit, eget tincidunt
-                  nibh pulvinar a.
+              </div><!-- Menu Item -->
+
+              <div class="col-lg-4 menu-item">
+                <a href="https://images.pexels.com/photos/19604443/pexels-photo-19604443/free-photo-of-red-flowerpot-hanging-on-a-wire.jpeg?auto=compress&cs=tinysrgb&w=600" class="glightbox"><img src="https://images.pexels.com/photos/19604443/pexels-photo-19604443/free-photo-of-red-flowerpot-hanging-on-a-wire.jpeg?auto=compress&cs=tinysrgb&w=600" class="menu-img img-fluid" alt=""></a>
+                <h4>Small Hanging Pots</h4>
+                <p class="price">
+                  Rs.259
                 </p>
-              </div>
-              <div class="card-footer-c">
-                <a href="#" class="link-c link-icon">Read more
-                  <span class="bi bi-calendar4-week"></span>
-                </a>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-4">
-            <div class="card-box-c foo">
-              <div class="card-header-c d-flex">
-                <div class="card-box-ico">
-                  <span class="bi bi-card-checklist"></span>
-                </div>
-                <div class="card-title-c align-self-center">
-                  <h2 class="title-c">Sell</h2>
-                </div>
-              </div>
-              <div class="card-body-c">
-                <p class="content-c">
-                  Sed porttitor lectus nibh. Cras ultricies ligula sed magna dictum porta. Praesent sapien massa,
-                  convallis a pellentesque
-                  nec, egestas non nisi.
+              </div><!-- Menu Item -->
+
+              <div class="col-lg-4 menu-item">
+                <a href="https://images.pexels.com/photos/6508404/pexels-photo-6508404.jpeg?auto=compress&cs=tinysrgb&w=600" class="glightbox"><img src="https://images.pexels.com/photos/6508404/pexels-photo-6508404.jpeg?auto=compress&cs=tinysrgb&w=600" class="menu-img img-fluid" alt=""></a>
+                <h4>Water Spray</h4>
+                <p class="price">
+                  Rs. 349
                 </p>
-              </div>
-              <div class="card-footer-c">
-                <a href="#" class="link-c link-icon">Read more
-                  <span class="bi bi-chevron-right"></span>
-                </a>
-              </div>
+              </div><!-- Menu Item -->
+
+              <div class="col-lg-4 menu-item">
+                <a href="https://cdn.pixabay.com/photo/2015/05/12/12/28/plant-763965_640.jpg" class="glightbox"><img src="https://cdn.pixabay.com/photo/2015/05/12/12/28/plant-763965_640.jpg" class="menu-img img-fluid" alt=""></a>
+                <h4>Pots</h4>
+                <p class="price">
+                  Rs.299
+                </p>
+              </div><!-- Menu Item -->
+
+              <div class="col-lg-4 menu-item">
+                <a href="https://images.pexels.com/photos/4750384/pexels-photo-4750384.jpeg?auto=compress&cs=tinysrgb&w=600" class="glightbox"><img src="https://images.pexels.com/photos/4750384/pexels-photo-4750384.jpeg?auto=compress&cs=tinysrgb&w=600" class="menu-img img-fluid" alt=""></a>
+                <h4>Gardening Seeds</h4>
+                <p class="price">
+                  Rs.149/gm
+                </p>
+              </div><!-- Menu Item -->
+
+              <div class="col-lg-4 menu-item">
+                <a href="https://images.pexels.com/photos/3971211/pexels-photo-3971211.jpeg?auto=compress&cs=tinysrgb&w=600" class="glightbox"><img src="https://images.pexels.com/photos/3971211/pexels-photo-3971211.jpeg?auto=compress&cs=tinysrgb&w=600" class="menu-img img-fluid" alt=""></a>
+                <h4>Farming Tool</h4>
+                <p class="price">
+                  Rs.499
+                </p>
+              </div><!-- Menu Item -->
+
             </div>
-          </div>
+          </div><!-- End Starter Menu Content -->
+
         </div>
-      </div>
-    </section><!-- End Services Section -->
-
-    <!-- ======= Latest Properties Section ======= -->
-    <section class="section-property section-t8">
-      <div class="container">
-        <div class="row">
-          <div class="col-md-12">
-            <div class="title-wrap d-flex justify-content-between">
-              <div class="title-box">
-                <h2 class="title-a">Latest Properties</h2>
-              </div>
-              <div class="title-link">
-                <a href="property-grid.html">All Property
-                  <span class="bi bi-chevron-right"></span>
-                </a>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div id="property-carousel" class="swiper">
-          <div class="swiper-wrapper">
-
-            <div class="carousel-item-b swiper-slide">
-              <div class="card-box-a card-shadow">
-                <div class="img-box-a">
-                  <img src="/static/img/property-6.jpg" alt="" class="img-a img-fluid">
-                </div>
-                <div class="card-overlay">
-                  <div class="card-overlay-a-content">
-                    <div class="card-header-a">
-                      <h2 class="card-title-a">
-                        <a href="property-single.html">206 Mount
-                          <br /> Olive Road Two</a>
-                      </h2>
-                    </div>
-                    <div class="card-body-a">
-                      <div class="price-box d-flex">
-                        <span class="price-a">rent | $ 12.000</span>
-                      </div>
-                      <a href="#" class="link-a">Click here to view
-                        <span class="bi bi-chevron-right"></span>
-                      </a>
-                    </div>
-                    <div class="card-footer-a">
-                      <ul class="card-info d-flex justify-content-around">
-                        <li>
-                          <h4 class="card-info-title">Area</h4>
-                          <span>340m
-                            <sup>2</sup>
-                          </span>
-                        </li>
-                        <li>
-                          <h4 class="card-info-title">Beds</h4>
-                          <span>2</span>
-                        </li>
-                        <li>
-                          <h4 class="card-info-title">Baths</h4>
-                          <span>4</span>
-                        </li>
-                        <li>
-                          <h4 class="card-info-title">Garages</h4>
-                          <span>1</span>
-                        </li>
-                      </ul>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div><!-- End carousel item -->
-
-            <div class="carousel-item-b swiper-slide">
-              <div class="card-box-a card-shadow">
-                <div class="img-box-a">
-                  <img src="/static/img/property-3.jpg" alt="" class="img-a img-fluid">
-                </div>
-                <div class="card-overlay">
-                  <div class="card-overlay-a-content">
-                    <div class="card-header-a">
-                      <h2 class="card-title-a">
-                        <a href="property-single.html">157 West
-                          <br /> Central Park</a>
-                      </h2>
-                    </div>
-                    <div class="card-body-a">
-                      <div class="price-box d-flex">
-                        <span class="price-a">rent | $ 12.000</span>
-                      </div>
-                      <a href="property-single.html" class="link-a">Click here to view
-                        <span class="bi bi-chevron-right"></span>
-                      </a>
-                    </div>
-                    <div class="card-footer-a">
-                      <ul class="card-info d-flex justify-content-around">
-                        <li>
-                          <h4 class="card-info-title">Area</h4>
-                          <span>340m
-                            <sup>2</sup>
-                          </span>
-                        </li>
-                        <li>
-                          <h4 class="card-info-title">Beds</h4>
-                          <span>2</span>
-                        </li>
-                        <li>
-                          <h4 class="card-info-title">Baths</h4>
-                          <span>4</span>
-                        </li>
-                        <li>
-                          <h4 class="card-info-title">Garages</h4>
-                          <span>1</span>
-                        </li>
-                      </ul>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div><!-- End carousel item -->
-
-            <div class="carousel-item-b swiper-slide">
-              <div class="card-box-a card-shadow">
-                <div class="img-box-a">
-                  <img src="/static/img/property-7.jpg" alt="" class="img-a img-fluid">
-                </div>
-                <div class="card-overlay">
-                  <div class="card-overlay-a-content">
-                    <div class="card-header-a">
-                      <h2 class="card-title-a">
-                        <a href="property-single.html">245 Azabu
-                          <br /> Nishi Park let</a>
-                      </h2>
-                    </div>
-                    <div class="card-body-a">
-                      <div class="price-box d-flex">
-                        <span class="price-a">rent | $ 12.000</span>
-                      </div>
-                      <a href="property-single.html" class="link-a">Click here to view
-                        <span class="bi bi-chevron-right"></span>
-                      </a>
-                    </div>
-                    <div class="card-footer-a">
-                      <ul class="card-info d-flex justify-content-around">
-                        <li>
-                          <h4 class="card-info-title">Area</h4>
-                          <span>340m
-                            <sup>2</sup>
-                          </span>
-                        </li>
-                        <li>
-                          <h4 class="card-info-title">Beds</h4>
-                          <span>2</span>
-                        </li>
-                        <li>
-                          <h4 class="card-info-title">Baths</h4>
-                          <span>4</span>
-                        </li>
-                        <li>
-                          <h4 class="card-info-title">Garages</h4>
-                          <span>1</span>
-                        </li>
-                      </ul>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div><!-- End carousel item -->
-
-            <div class="carousel-item-b swiper-slide">
-              <div class="card-box-a card-shadow">
-                <div class="img-box-a">
-                  <img src="/static/img/property-10.jpg" alt="" class="img-a img-fluid">
-                </div>
-                <div class="card-overlay">
-                  <div class="card-overlay-a-content">
-                    <div class="card-header-a">
-                      <h2 class="card-title-a">
-                        <a href="property-single.html">204 Montal
-                          <br /> South Bela Two</a>
-                      </h2>
-                    </div>
-                    <div class="card-body-a">
-                      <div class="price-box d-flex">
-                        <span class="price-a">rent | $ 12.000</span>
-                      </div>
-                      <a href="property-single.html" class="link-a">Click here to view
-                        <span class="bi bi-chevron-right"></span>
-                      </a>
-                    </div>
-                    <div class="card-footer-a">
-                      <ul class="card-info d-flex justify-content-around">
-                        <li>
-                          <h4 class="card-info-title">Area</h4>
-                          <span>340m
-                            <sup>2</sup>
-                          </span>
-                        </li>
-                        <li>
-                          <h4 class="card-info-title">Beds</h4>
-                          <span>2</span>
-                        </li>
-                        <li>
-                          <h4 class="card-info-title">Baths</h4>
-                          <span>4</span>
-                        </li>
-                        <li>
-                          <h4 class="card-info-title">Garages</h4>
-                          <span>1</span>
-                        </li>
-                      </ul>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div><!-- End carousel item -->
-          </div>
-        </div>
-        <div class="propery-carousel-pagination carousel-pagination"></div>
-
-      </div>
-    </section><!-- End Latest Properties Section -->
-
-    <!-- ======= Agents Section ======= -->
-    <section class="section-agents section-t8">
-      <div class="container">
-        <div class="row">
-          <div class="col-md-12">
-            <div class="title-wrap d-flex justify-content-between">
-              <div class="title-box">
-                <h2 class="title-a">Best Agents</h2>
-              </div>
-              <div class="title-link">
-                <a href="agents-grid.html">All Agents
-                  <span class="bi bi-chevron-right"></span>
-                </a>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="row">
-          <div class="col-md-4">
-            <div class="card-box-d">
-              <div class="card-img-d">
-                <img src="/static/img/agent-4.jpg" alt="" class="img-d img-fluid">
-              </div>
-              <div class="card-overlay card-overlay-hover">
-                <div class="card-header-d">
-                  <div class="card-title-d align-self-center">
-                    <h3 class="title-d">
-                      <a href="agent-single.html" class="link-two">Margaret Sotillo
-                        <br> Escala</a>
-                    </h3>
-                  </div>
-                </div>
-                <div class="card-body-d">
-                  <p class="content-d color-text-a">
-                    Sed porttitor lectus nibh, Cras ultricies ligula sed magna dictum porta two.
-                  </p>
-                  <div class="info-agents color-a">
-                    <p>
-                      <strong>Phone: </strong> +54 356 945234
-                    </p>
-                    <p>
-                      <strong>Email: </strong> agents@example.com
-                    </p>
-                  </div>
-                </div>
-                <div class="card-footer-d">
-                  <div class="socials-footer d-flex justify-content-center">
-                    <ul class="list-inline">
-                      <li class="list-inline-item">
-                        <a href="#" class="link-one">
-                          <i class="bi bi-facebook" aria-hidden="true"></i>
-                        </a>
-                      </li>
-                      <li class="list-inline-item">
-                        <a href="#" class="link-one">
-                          <i class="bi bi-twitter" aria-hidden="true"></i>
-                        </a>
-                      </li>
-                      <li class="list-inline-item">
-                        <a href="#" class="link-one">
-                          <i class="bi bi-instagram" aria-hidden="true"></i>
-                        </a>
-                      </li>
-                      <li class="list-inline-item">
-                        <a href="#" class="link-one">
-                          <i class="bi bi-linkedin" aria-hidden="true"></i>
-                        </a>
-                      </li>
-                    </ul>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-4">
-            <div class="card-box-d">
-              <div class="card-img-d">
-                <img src="/static/img/agent-1.jpg" alt="" class="img-d img-fluid">
-              </div>
-              <div class="card-overlay card-overlay-hover">
-                <div class="card-header-d">
-                  <div class="card-title-d align-self-center">
-                    <h3 class="title-d">
-                      <a href="agent-single.html" class="link-two">Stiven Spilver
-                        <br> Darw</a>
-                    </h3>
-                  </div>
-                </div>
-                <div class="card-body-d">
-                  <p class="content-d color-text-a">
-                    Sed porttitor lectus nibh, Cras ultricies ligula sed magna dictum porta two.
-                  </p>
-                  <div class="info-agents color-a">
-                    <p>
-                      <strong>Phone: </strong> +54 356 945234
-                    </p>
-                    <p>
-                      <strong>Email: </strong> agents@example.com
-                    </p>
-                  </div>
-                </div>
-                <div class="card-footer-d">
-                  <div class="socials-footer d-flex justify-content-center">
-                    <ul class="list-inline">
-                      <li class="list-inline-item">
-                        <a href="#" class="link-one">
-                          <i class="bi bi-facebook" aria-hidden="true"></i>
-                        </a>
-                      </li>
-                      <li class="list-inline-item">
-                        <a href="#" class="link-one">
-                          <i class="bi bi-twitter" aria-hidden="true"></i>
-                        </a>
-                      </li>
-                      <li class="list-inline-item">
-                        <a href="#" class="link-one">
-                          <i class="bi bi-instagram" aria-hidden="true"></i>
-                        </a>
-                      </li>
-                      <li class="list-inline-item">
-                        <a href="#" class="link-one">
-                          <i class="bi bi-linkedin" aria-hidden="true"></i>
-                        </a>
-                      </li>
-                    </ul>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-4">
-            <div class="card-box-d">
-              <div class="card-img-d">
-                <img src="/static/img/agent-5.jpg" alt="" class="img-d img-fluid">
-              </div>
-              <div class="card-overlay card-overlay-hover">
-                <div class="card-header-d">
-                  <div class="card-title-d align-self-center">
-                    <h3 class="title-d">
-                      <a href="agent-single.html" class="link-two">Emma Toledo
-                        <br> Cascada</a>
-                    </h3>
-                  </div>
-                </div>
-                <div class="card-body-d">
-                  <p class="content-d color-text-a">
-                    Sed porttitor lectus nibh, Cras ultricies ligula sed magna dictum porta two.
-                  </p>
-                  <div class="info-agents color-a">
-                    <p>
-                      <strong>Phone: </strong> +54 356 945234
-                    </p>
-                    <p>
-                      <strong>Email: </strong> agents@example.com
-                    </p>
-                  </div>
-                </div>
-                <div class="card-footer-d">
-                  <div class="socials-footer d-flex justify-content-center">
-                    <ul class="list-inline">
-                      <li class="list-inline-item">
-                        <a href="#" class="link-one">
-                          <i class="bi bi-facebook" aria-hidden="true"></i>
-                        </a>
-                      </li>
-                      <li class="list-inline-item">
-                        <a href="#" class="link-one">
-                          <i class="bi bi-twitter" aria-hidden="true"></i>
-                        </a>
-                      </li>
-                      <li class="list-inline-item">
-                        <a href="#" class="link-one">
-                          <i class="bi bi-instagram" aria-hidden="true"></i>
-                        </a>
-                      </li>
-                      <li class="list-inline-item">
-                        <a href="#" class="link-one">
-                          <i class="bi bi-linkedin" aria-hidden="true"></i>
-                        </a>
-                      </li>
-                    </ul>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section><!-- End Agents Section -->
-
-    <!-- ======= Latest News Section ======= -->
-    <section class="section-news section-t8">
-      <div class="container">
-        <div class="row">
-          <div class="col-md-12">
-            <div class="title-wrap d-flex justify-content-between">
-              <div class="title-box">
-                <h2 class="title-a">Latest News</h2>
-              </div>
-              <div class="title-link">
-                <a href="blog-grid.html">All News
-                  <span class="bi bi-chevron-right"></span>
-                </a>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div id="news-carousel" class="swiper">
-          <div class="swiper-wrapper">
-
-            <div class="carousel-item-c swiper-slide">
-              <div class="card-box-b card-shadow news-box">
-                <div class="img-box-b">
-                  <img src="/static/img/post-2.jpg" alt="" class="img-b img-fluid">
-                </div>
-                <div class="card-overlay">
-                  <div class="card-header-b">
-                    <div class="card-category-b">
-                      <a href="#" class="category-b">House</a>
-                    </div>
-                    <div class="card-title-b">
-                      <h2 class="title-2">
-                        <a href="blog-single.html">House is comming
-                          <br> new</a>
-                      </h2>
-                    </div>
-                    <div class="card-date">
-                      <span class="date-b">18 Sep. 2017</span>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div><!-- End carousel item -->
-
-            <div class="carousel-item-c swiper-slide">
-              <div class="card-box-b card-shadow news-box">
-                <div class="img-box-b">
-                  <img src="/static/img/post-5.jpg" alt="" class="img-b img-fluid">
-                </div>
-                <div class="card-overlay">
-                  <div class="card-header-b">
-                    <div class="card-category-b">
-                      <a href="#" class="category-b">Travel</a>
-                    </div>
-                    <div class="card-title-b">
-                      <h2 class="title-2">
-                        <a href="blog-single.html">Travel is comming
-                          <br> new</a>
-                      </h2>
-                    </div>
-                    <div class="card-date">
-                      <span class="date-b">18 Sep. 2017</span>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div><!-- End carousel item -->
-
-            <div class="carousel-item-c swiper-slide">
-              <div class="card-box-b card-shadow news-box">
-                <div class="img-box-b">
-                  <img src="/static/img/post-7.jpg" alt="" class="img-b img-fluid">
-                </div>
-                <div class="card-overlay">
-                  <div class="card-header-b">
-                    <div class="card-category-b">
-                      <a href="#" class="category-b">Park</a>
-                    </div>
-                    <div class="card-title-b">
-                      <h2 class="title-2">
-                        <a href="blog-single.html">Park is comming
-                          <br> new</a>
-                      </h2>
-                    </div>
-                    <div class="card-date">
-                      <span class="date-b">18 Sep. 2017</span>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div><!-- End carousel item -->
-
-            <div class="carousel-item-c swiper-slide">
-              <div class="card-box-b card-shadow news-box">
-                <div class="img-box-b">
-                  <img src="/static/img/post-3.jpg" alt="" class="img-b img-fluid">
-                </div>
-                <div class="card-overlay">
-                  <div class="card-header-b">
-                    <div class="card-category-b">
-                      <a href="#" class="category-b">Travel</a>
-                    </div>
-                    <div class="card-title-b">
-                      <h2 class="title-2">
-                        <a href="#">Travel is comming
-                          <br> new</a>
-                      </h2>
-                    </div>
-                    <div class="card-date">
-                      <span class="date-b">18 Sep. 2017</span>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div><!-- End carousel item -->
-
-          </div>
-        </div>
-
-        <div class="news-carousel-pagination carousel-pagination"></div>
-      </div>
-    </section><!-- End Latest News Section -->
+    </section><!-- End Menu Section -->
 
     <!-- ======= Testimonials Section ======= -->
-    <section class="section-testimonials section-t8 nav-arrow-a">
-      <div class="container">
-        <div class="row">
-          <div class="col-md-12">
-            <div class="title-wrap d-flex justify-content-between">
-              <div class="title-box">
-                <h2 class="title-a">Testimonials</h2>
-              </div>
-            </div>
-          </div>
+    <section id="testimonials" class="testimonials section-bg">
+      <div class="container" data-aos="fade-up">
+
+        <div class="section-header">
+          <h2>Testimonials</h2>
+          <p>What Are They <span>Saying About Us</span></p>
         </div>
 
-        <div id="testimonial-carousel" class="swiper">
+        <div class="slides-1 swiper" data-aos="fade-up" data-aos-delay="100">
           <div class="swiper-wrapper">
 
-            <div class="carousel-item-a swiper-slide">
-              <div class="testimonials-box">
-                <div class="row">
-                  <div class="col-sm-12 col-md-6">
-                    <div class="testimonial-img">
-                      <img src="/static/img/testimonial-1.jpg" alt="" class="img-fluid">
+            <div class="swiper-slide">
+              <div class="testimonial-item">
+                <div class="row gy-4 justify-content-center">
+                  <div class="col-lg-6">
+                    <div class="testimonial-content">
+                      <p>
+                        <i class="bi bi-quote quote-icon-left"></i>
+                        She is also a mentor for thesis students working with food issues in their design projects. These thesis projects have included an urban farm, a slow food cooking school, a greenhouse and market complex under an elevated highway, and a cooperative housing complex with a community garden. She is a co-curator for the exhibit Carrot City: Designing for Urban Agriculture (www.Toronto Metropolitan University.ca/carrotcity) and a co-author of the book Carrot City.
+                        <i class="bi bi-quote quote-icon-right"></i>
+                      </p>
+                      <h3>June Komisar</h3>
+                      <h4>Creativity in Architecture</h4>
+                      <div class="stars">
+                        <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+                      </div>
                     </div>
                   </div>
-                  <div class="col-sm-12 col-md-6">
-                    <div class="testimonial-ico">
-                      <i class="bi bi-chat-quote-fill"></i>
-                    </div>
-                    <div class="testimonials-content">
-                      <p class="testimonial-text">
-                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Omnis, cupiditate ea nam praesentium
-                        debitis hic ber quibusdam
-                        voluptatibus officia expedita corpori.
-                      </p>
-                    </div>
-                    <div class="testimonial-author-box">
-                      <img src="/static/img/mini-testimonial-1.jpg" alt="" class="testimonial-avatar">
-                      <h5 class="testimonial-author">Albert & Erika</h5>
-                    </div>
+                  <div class="col-lg-2 text-center">
+                    <img src="https://network.expertisefinder.com/expert-profile-photo/june-komisar" class="img-fluid testimonial-img" alt="">
                   </div>
                 </div>
               </div>
-            </div><!-- End carousel item -->
+            </div><!-- End testimonial item -->
 
-            <div class="carousel-item-a swiper-slide">
-              <div class="testimonials-box">
-                <div class="row">
-                  <div class="col-sm-12 col-md-6">
-                    <div class="testimonial-img">
-                      <img src="/static/img/testimonial-2.jpg" alt="" class="img-fluid">
+            <div class="swiper-slide">
+              <div class="testimonial-item">
+                <div class="row gy-4 justify-content-center">
+                  <div class="col-lg-6">
+                    <div class="testimonial-content">
+                      <p>
+                        <i class="bi bi-quote quote-icon-left"></i>
+                        he has a background in landscape architecture, rural planning and development, and cultural geography. She has had a design practice for over 20 years and has worked as a county planner. Since 2002, she has been a full-time faculty member at the University of Guelph. In 2007, she was the recipient of the OAC Distinguished Professor Award. 
+                        <i class="bi bi-quote quote-icon-right"></i>
+                      </p>
+                      <h3>Karen Landman</h3>
+                      <h4>Green Infrastructure</h4>
+                      <div class="stars">
+                        <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+                      </div>
                     </div>
                   </div>
-                  <div class="col-sm-12 col-md-6">
-                    <div class="testimonial-ico">
-                      <i class="bi bi-chat-quote-fill"></i>
-                    </div>
-                    <div class="testimonials-content">
-                      <p class="testimonial-text">
-                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Omnis, cupiditate ea nam praesentium
-                        debitis hic ber quibusdam
-                        voluptatibus officia expedita corpori.
-                      </p>
-                    </div>
-                    <div class="testimonial-author-box">
-                      <img src="/static/img/mini-testimonial-2.jpg" alt="" class="testimonial-avatar">
-                      <h5 class="testimonial-author">Pablo & Emma</h5>
-                    </div>
+                  <div class="col-lg-2 text-center">
+                    <img src="https://network.expertisefinder.com/expert-profile-photo/karen-landman" class="img-fluid testimonial-img" alt="">
                   </div>
                 </div>
               </div>
-            </div><!-- End carousel item -->
+            </div><!-- End testimonial item -->
+
+            <div class="swiper-slide">
+              <div class="testimonial-item">
+                <div class="row gy-4 justify-content-center">
+                  <div class="col-lg-6">
+                    <div class="testimonial-content">
+                      <p>
+                        <i class="bi bi-quote quote-icon-left"></i>
+                        The primary focus of Dr Patel’s current research has been sociocultural and ecological impacts of agrarian and climate change on small-scale agriculture and indigenous communities in the Global South. It includes loss of agricultural biodiversity and associated indigenous knowledge, change in food consumption and its consequences on nutrition security, rural-urban migration for seeking livelihood, and participatory technology development to promote cultivation and consumption of climate change-resilient indigenous crops, such as small millets.
+                        <i class="bi bi-quote quote-icon-right"></i>
+                      </p>
+                      <h3>Kiit Patel</h3>
+                      <h4>Agrobiodiversity</h4>
+                      <div class="stars">
+                        <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-lg-2 text-center">
+                    <img src="https://network.expertisefinder.com/expert-profile-photo/kiit-patel" class="img-fluid testimonial-img" alt="">
+                  </div>
+                </div>
+              </div>
+            </div><!-- End testimonial item -->
+
+            <div class="swiper-slide">
+              <div class="testimonial-item">
+                <div class="row gy-4 justify-content-center">
+                  <div class="col-lg-6">
+                    <div class="testimonial-content">
+                      <p>
+                        <i class="bi bi-quote quote-icon-left"></i>
+                        He founded and directs P-REX, The Project for Reclamation Excellence, a multi-disciplinary research effort at MIT focusing on the design and reuse of waste landscapes worldwide. His work emphasizes the link between our consumption of natural resources, and the waste and destruction of landscape, to help us better understand how to proceed with redesigning our wasteful places for future productive uses and more intelligent outcomes.
+                        <i class="bi bi-quote quote-icon-right"></i>
+                      </p>
+                      <h3>Alan Berger</h3>
+                      <h4>Urban design</h4>
+                      <div class="stars">
+                        <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-lg-2 text-center">
+                    <img src="https://network.expertisefinder.com/expert-profile-photo/alan-berger" class="img-fluid testimonial-img" alt="">
+                  </div>
+                </div>
+              </div>
+            </div><!-- End testimonial item -->
 
           </div>
+          <div class="swiper-pagination"></div>
         </div>
-        <div class="testimonial-carousel-pagination carousel-pagination"></div>
 
       </div>
     </section><!-- End Testimonials Section -->
 
+        </div>
+
+      </div>
+    </section><!-- End Book A Table Section -->
+
+    <!-- ======= Gallery Section ======= -->
+    <section id="gallery" class="gallery section-bg">
+      <div class="container" data-aos="fade-up">
+
+        <div class="section-header">
+          <h2>gallery</h2>
+          <p>Check Our <span>Farming Gallery</span></p>
+        </div>
+
+        <div class="gallery-slider swiper">
+          <div class="swiper-wrapper align-items-center">
+            <div class="swiper-slide"><a class="glightbox" data-gallery="images-gallery" href="https://cdn.pixabay.com/photo/2016/09/21/04/46/barley-field-1684052_1280.jpg"><img src="https://cdn.pixabay.com/photo/2016/09/21/04/46/barley-field-1684052_1280.jpg" class="img-fluid" alt=""></a></div>
+            <div class="swiper-slide"><a class="glightbox" data-gallery="images-gallery" href="https://cdn.pixabay.com/photo/2016/08/01/17/08/tomatoes-1561565_640.jpg"><img src="https://cdn.pixabay.com/photo/2016/08/01/17/08/tomatoes-1561565_640.jpg" class="img-fluid" alt=""></a></div>
+            <div class="swiper-slide"><a class="glightbox" data-gallery="images-gallery" href="https://cdn.pixabay.com/photo/2017/07/30/23/59/garlic-2556022_1280.jpg"><img src="https://cdn.pixabay.com/photo/2017/07/30/23/59/garlic-2556022_1280.jpg" class="img-fluid" alt=""></a></div>
+            <div class="swiper-slide"><a class="glightbox" data-gallery="images-gallery" href="http://surl.li/rzuiw"><img src="http://surl.li/rzuiw" class="img-fluid" alt=""></a></div>
+            <div class="swiper-slide"><a class="glightbox" data-gallery="images-gallery" href="https://cdn.pixabay.com/photo/2013/12/05/19/20/deadman-ranch-223775_640.jpg"><img src="https://cdn.pixabay.com/photo/2013/12/05/19/20/deadman-ranch-223775_640.jpg" class="img-fluid" alt=""></a></div>
+            <div class="swiper-slide"><a class="glightbox" data-gallery="images-gallery" href="https://images.pexels.com/photos/5230908/pexels-photo-5230908.jpeg?auto=compress&cs=tinysrgb&w=600"><img src="https://images.pexels.com/photos/5230908/pexels-photo-5230908.jpeg?auto=compress&cs=tinysrgb&w=600" class="img-fluid" alt=""></a></div>
+            <div class="swiper-slide"><a class="glightbox" data-gallery="images-gallery" href="https://images.pexels.com/photos/6231715/pexels-photo-6231715.jpeg?auto=compress&cs=tinysrgb&w=600"><img src="https://images.pexels.com/photos/6231715/pexels-photo-6231715.jpeg?auto=compress&cs=tinysrgb&w=600" class="img-fluid" alt=""></a></div>
+            <div class="swiper-slide"><a class="glightbox" data-gallery="images-gallery" href="https://images.pexels.com/photos/9721357/pexels-photo-9721357.jpeg?auto=compress&cs=tinysrgb&w=600"><img src="https://images.pexels.com/photos/9721357/pexels-photo-9721357.jpeg?auto=compress&cs=tinysrgb&w=600" class="img-fluid" alt=""></a></div>
+          </div>
+          <div class="swiper-pagination"></div>
+        </div>
+
+      </div>
+    </section><!-- End Gallery Section -->
+
+    
   </main><!-- End #main -->
 
   <!-- ======= Footer ======= -->
-  <section class="section-footer">
-    <div class="container">
-      <div class="row">
-        <div class="col-sm-12 col-md-4">
-          <div class="widget-a">
-            <div class="w-header-a">
-              <h3 class="w-title-a text-brand">EstateAgency</h3>
-            </div>
-            <div class="w-body-a">
-              <p class="w-text-a color-text-a">
-                Enim minim veniam quis nostrud exercitation ullamco laboris nisi ut aliquip exea commodo consequat duis
-                sed aute irure.
-              </p>
-            </div>
-            <div class="w-footer-a">
-              <ul class="list-unstyled">
-                <li class="color-a">
-                  <span class="color-text-a">Phone .</span> contact@example.com
-                </li>
-                <li class="color-a">
-                  <span class="color-text-a">Email .</span> +54 356 945234
-                </li>
-              </ul>
-            </div>
-          </div>
-        </div>
-        <div class="col-sm-12 col-md-4 section-md-t3">
-          <div class="widget-a">
-            <div class="w-header-a">
-              <h3 class="w-title-a text-brand">The Company</h3>
-            </div>
-            <div class="w-body-a">
-              <div class="w-body-a">
-                <ul class="list-unstyled">
-                  <li class="item-list-a">
-                    <i class="bi bi-chevron-right"></i> <a href="#">Site Map</a>
-                  </li>
-                  <li class="item-list-a">
-                    <i class="bi bi-chevron-right"></i> <a href="#">Legal</a>
-                  </li>
-                  <li class="item-list-a">
-                    <i class="bi bi-chevron-right"></i> <a href="#">Agent Admin</a>
-                  </li>
-                  <li class="item-list-a">
-                    <i class="bi bi-chevron-right"></i> <a href="#">Careers</a>
-                  </li>
-                  <li class="item-list-a">
-                    <i class="bi bi-chevron-right"></i> <a href="#">Affiliate</a>
-                  </li>
-                  <li class="item-list-a">
-                    <i class="bi bi-chevron-right"></i> <a href="#">Privacy Policy</a>
-                  </li>
-                </ul>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="col-sm-12 col-md-4 section-md-t3">
-          <div class="widget-a">
-            <div class="w-header-a">
-              <h3 class="w-title-a text-brand">International sites</h3>
-            </div>
-            <div class="w-body-a">
-              <ul class="list-unstyled">
-                <li class="item-list-a">
-                  <i class="bi bi-chevron-right"></i> <a href="#">Venezuela</a>
-                </li>
-                <li class="item-list-a">
-                  <i class="bi bi-chevron-right"></i> <a href="#">China</a>
-                </li>
-                <li class="item-list-a">
-                  <i class="bi bi-chevron-right"></i> <a href="#">Hong Kong</a>
-                </li>
-                <li class="item-list-a">
-                  <i class="bi bi-chevron-right"></i> <a href="#">Argentina</a>
-                </li>
-                <li class="item-list-a">
-                  <i class="bi bi-chevron-right"></i> <a href="#">Singapore</a>
-                </li>
-                <li class="item-list-a">
-                  <i class="bi bi-chevron-right"></i> <a href="#">Philippines</a>
-                </li>
-              </ul>
-            </div>
-          </div>
-        </div>
+  
       </div>
     </div>
-  </section>
-  <footer>
-    <div class="container">
-      <div class="row">
-        <div class="col-md-12">
-          <nav class="nav-footer">
-            <ul class="list-inline">
-              <li class="list-inline-item">
-                <a href="#">Home</a>
-              </li>
-              <li class="list-inline-item">
-                <a href="#">About</a>
-              </li>
-              <li class="list-inline-item">
-                <a href="#">Property</a>
-              </li>
-              <li class="list-inline-item">
-                <a href="#">Blog</a>
-              </li>
-              <li class="list-inline-item">
-                <a href="#">Contact</a>
-              </li>
-            </ul>
-          </nav>
-          <div class="socials-a">
-            <ul class="list-inline">
-              <li class="list-inline-item">
-                <a href="#">
-                  <i class="bi bi-facebook" aria-hidden="true"></i>
-                </a>
-              </li>
-              <li class="list-inline-item">
-                <a href="#">
-                  <i class="bi bi-twitter" aria-hidden="true"></i>
-                </a>
-              </li>
-              <li class="list-inline-item">
-                <a href="#">
-                  <i class="bi bi-instagram" aria-hidden="true"></i>
-                </a>
-              </li>
-              <li class="list-inline-item">
-                <a href="#">
-                  <i class="bi bi-linkedin" aria-hidden="true"></i>
-                </a>
-              </li>
-            </ul>
-          </div>
-          <div class="copyright-footer">
-            <p class="copyright color-text-a">
-              &copy; Copyright
-              <span class="color-a">EstateAgency</span> All Rights Reserved.
-            </p>
-          </div>
-          <div class="credits">
-            <!--
-            All the links in the footer should remain intact.
-            You can delete the links only if you purchased the pro version.
-            Licensing information: https://bootstrapmade.com/license/
-            Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/buy/?theme=EstateAgency
-          -->
-            Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
-          </div>
-        </div>
-      </div>
-    </div>
-  </footer><!-- End  Footer -->
+
+   
+  <!-- End Footer -->
+
+  <a href="#" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
 
   <div id="preloader"></div>
-  <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
 
   <!-- Vendor JS Files -->
   <script src="/static/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="/static/vendor/aos/aos.js"></script>
+  <script src="/static/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="/static/vendor/purecounter/purecounter_vanilla.js"></script>
   <script src="/static/vendor/swiper/swiper-bundle.min.js"></script>
   <script src="/static/vendor/php-email-form/validate.js"></script>
 
   <!-- Template Main JS File -->
   <script src="/static/js/main.js"></script>
+  
+  {% block js %}
+    
+  {% endblock  %}
+    
 
 </body>
 

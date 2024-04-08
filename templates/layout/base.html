@@ -1,0 +1,464 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>
+    
+    {% block title %}
+        Baked Django - Django
+    {% endblock title %}
+        
+  </title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+
+  <!-- Favicons -->
+  <link href="/static/img/favicon.png" rel="icon">
+  <link href="/static/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,600;1,700&family=Amatic+SC:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Inter:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="/static/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="/static/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="/static/vendor/aos/aos.css" rel="stylesheet">
+  <link href="/static/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="/static/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+  <!-- Template Main CSS File -->
+  <link href="/static/css/main.css" rel="stylesheet">
+
+  <!-- =======================================================
+  * Template Name: Yummy
+  * Template URL: https://bootstrapmade.com/yummy-bootstrap-restaurant-website-template/
+  * Updated: Mar 17 2024 with Bootstrap v5.3.3
+  * Author: BootstrapMade.com
+  * License: https://bootstrapmade.com/license/
+  ======================================================== -->
+  
+  {% block css %}
+    
+  {% endblock css %}
+    
+</head>
+
+<body>
+    {% include 'components/header.html' %}
+    <main id="main">
+        
+        {% block content %}
+            
+        {% endblock  %}
+            
+    </main>
+    
+    {% include 'components/header.html' %}
+
+  <!-- ======= Header ======= -->
+  <header id="header" class="header fixed-top d-flex align-items-center">
+    <div class="container d-flex align-items-center justify-content-between">
+
+      <a href="index.html" class="logo d-flex align-items-center me-auto me-lg-0">
+        <!-- Uncomment the line below if you also wish to use an image logo -->
+        <!-- <img src="/static/img/logo.png" alt=""> -->
+        <h1>URBONIC<span>.</span></h1>
+        
+      </a>
+
+      <nav id="navbar" class="navbar">
+        <ul>
+          <li><a href="#hero">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#menu">Menu</a></li>
+          <li><a href="#gallery">Gallery</a></li>
+          
+          </li>
+          <li><a href="{% url 'contact' %}">Contact</a></li>
+        </ul>
+      </nav><!-- .navbar -->
+
+      <a class="btn-book-a-table" href="{% url 'vendor_login' %}">Login</a>
+      <i class="mobile-nav-toggle mobile-nav-show bi bi-list"></i>
+      <i class="mobile-nav-toggle mobile-nav-hide d-none bi bi-x"></i>
+
+    </div>
+  </header><!-- End Header -->
+
+  <!-- ======= Hero Section ======= -->
+  <section id="hero" class="hero d-flex align-items-center section-bg">
+    <div class="container">
+      <div class="row justify-content-between gy-5">
+        <div class="col-lg-5 order-2 order-lg-1 d-flex flex-column justify-content-center align-items-center align-items-lg-start text-center text-lg-start">
+          <h2 data-aos="fade-up">Welcome to<br> Urban Micro Platform</h2>
+          <p data-aos="fade-up" data-aos-delay="100">Cultivating sustainability from city streets to rooftop retreats</p>
+          <div class="d-flex" data-aos="fade-up" data-aos-delay="200">
+           
+            <a href="https://www.youtube.com/watch?v=ckeXvykKe9A&pp=ygUNdXJiYW4gZmFybWluZw%3D%3D" class="glightbox btn-watch-video d-flex align-items-center"><i class="bi bi-play-circle"></i><span>Watch Video</span></a>
+          </div>
+        </div>
+        <div class="col-lg-5 order-1 order-lg-2 text-center text-lg-start">
+          <img src="https://cdn.pixabay.com/photo/2018/03/21/16/05/greenhouse-3247181_640.jpg" class="img-fluid" alt="" data-aos="zoom-out" data-aos-delay="300">
+        </div>
+      </div>
+    </div>
+  </section><!-- End Hero Section -->
+
+  <main id="main">
+
+    <!-- ======= About Section ======= -->
+    <section id="about" class="about">
+      <div class="container" data-aos="fade-up">
+
+        <div class="section-header">
+          <h2>About Us</h2>
+          <p> <span>Healthy Produce</span></p>
+        </div>
+
+        <div class="row gy-4">
+          <div class="col-lg-7 position-relative about-img" style="background-image: url(https://cdn.pixabay.com/photo/2016/07/16/20/48/peaches-1522680_640.jpg) ;" data-aos="fade-up" data-aos-delay="100">
+            
+          </div>
+          <div class="col-lg-5 d-flex align-items-end" data-aos="fade-up" data-aos-delay="300">
+            <div class="content ps-0 ps-lg-5">
+              <p class="fst-italic">
+                A sustainable solution, cultivating fresh, nutrient-rich produce within city limits, promoting healthier diets and communities."
+              </p>
+              <ul>
+                <li><i class="bi bi-check2-all"></i> Fresh and locally grown: Urban farming provides access to fresh produce that is harvested nearby, minimizing transportation and preserving nutrients.</li>
+                <li><i class="bi bi-check2-all"></i> Organic and pesticide-free: Many urban farming practices prioritize organic methods, ensuring that the food grown is free from harmful chemicals, promoting healthier eating choices.</li>
+                <li><i class="bi bi-check2-all"></i> Diverse and nutritious: Urban farming encourages the cultivation of a variety of fruits, vegetables, and herbs, offering a diverse range of nutrient-rich foods that contribute to balanced diets and overall well-being.</li>
+              </ul>
+
+              <div class="position-relative mt-4">
+                <img src="https://cdn.pixabay.com/photo/2016/11/08/05/35/agriculture-1807549_1280.jpg" class="img-fluid" alt="">
+                <a href="https://www.youtube.com/watch?v=LGF33NN4B8U&pp=ygUvdXJiYW4gZmFybWluZyBmcmVzaCBmcnVpdHMgZGV0YWlscyBpbiBkaXNjb3Zlcnk%3D" class="glightbox play-btn"></a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section><!-- End About Section -->
+
+    <!-- ======= Why Us Section ======= -->
+    <section id="why-us" class="why-us section-bg">
+      <div class="container" data-aos="fade-up">
+
+        <div class="row gy-4">
+
+          <div class="col-lg-4" data-aos="fade-up" data-aos-delay="100">
+            <div class="why-box">
+              <h3>Why Choose Urban Micro Farming?</h3>
+              <p>
+                Urban micro-farming is a strategic choice for urban dwellers looking to cultivate their own fresh produce within limited spaces. By utilizing innovative techniques like vertical gardening, rooftop gardens, and hydroponics, micro-farming maximizes space efficiency while minimizing environmental impact. Beyond providing access to nutritious food, it fosters community engagement and education, empowering individuals to take control of their food sources and contribute to local resilience. In a world facing challenges like food insecurity and climate change, urban micro-farming offers a sustainable and practical solution that not only nourishes bodies but also strengthens communities and enhances urban environments.
+              </p>
+              <div class="text-center">
+                <a href="#" class="more-btn">Learn More <i class="bx bx-chevron-right"></i></a>
+              </div>
+            </div>
+          </div><!-- End Why Box -->
+
+          <div class="col-lg-8 d-flex align-items-center">
+            <div class="row gy-4">
+
+              <div class="col-xl-4" data-aos="fade-up" data-aos-delay="200">
+                <div class="icon-box d-flex flex-column justify-content-center align-items-center">
+                  <i class="bi bi-clipboard-data"></i>
+                  <h4>Local Food Production</h4>
+                  <p>Urban farming allows for the production of food within or near urban areas, reducing the distance food needs to travel from farm to table. </p>
+                </div>
+              </div><!-- End Icon Box -->
+
+              <div class="col-xl-4" data-aos="fade-up" data-aos-delay="300">
+                <div class="icon-box d-flex flex-column justify-content-center align-items-center">
+                  <i class="bi bi-gem"></i>
+                  <h4>Resource Efficiency</h4>
+                  <p> Urban farming maximizes the efficient use of limited urban space by repurposing rooftops, vacant lots, and other underutilized areas for agricultural purposes. </p>
+                </div>
+              </div><!-- End Icon Box -->
+
+              <div class="col-xl-4" data-aos="fade-up" data-aos-delay="400">
+                <div class="icon-box d-flex flex-column justify-content-center align-items-center">
+                  <i class="bi bi-inboxes"></i>
+                  <h4>Community Engagement and Health Benefits</h4>
+                  <p>Urban farming fosters community engagement by bringing people together to cultivate and share fresh, locally grown produce. </p>
+                </div>
+              </div><!-- End Icon Box -->
+
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section><!-- End Why Us Section -->
+
+    <!-- ======= Stats Counter Section ======= -->
+    <section id="stats-counter" class="stats-counter">
+      <div class="container" data-aos="zoom-out">
+      </div>
+    </div>
+    </section><!-- End Stats Counter Section -->
+
+    <!-- ======= Menu Section ======= -->
+    <section id="menu" class="menu">
+      <div class="container" data-aos="fade-up">
+
+        <div class="section-header">
+          <h2>Our Menu</h2>
+          <p>Check Our <span>Farming Tools</span></p>
+        </div>
+
+        <ul class="nav nav-tabs d-flex justify-content-center" data-aos="fade-up" data-aos-delay="200">
+       </ul>
+        <div class="tab-content" data-aos="fade-up" data-aos-delay="300">
+
+          <div class="tab-pane fade active show" id="menu-starters">
+
+            <div class="tab-header text-center">
+              <h3>Starters</h3>
+            </div>
+
+            <div class="row gy-5">
+
+              <div class="col-lg-4 menu-item">
+                <a href="https://images.pexels.com/photos/6231726/pexels-photo-6231726.jpeg?auto=compress&cs=tinysrgb&w=600" class="glightbox"><img src="https://images.pexels.com/photos/6231726/pexels-photo-6231726.jpeg?auto=compress&cs=tinysrgb&w=600" class="menu-img img-fluid" alt=""></a>
+                <h4>Hand Tool</h4>
+                <p class="price">
+                  Rs.199
+                </p>
+              </div><!-- Menu Item -->
+
+              <div class="col-lg-4 menu-item">
+                <a href="https://images.pexels.com/photos/19604443/pexels-photo-19604443/free-photo-of-red-flowerpot-hanging-on-a-wire.jpeg?auto=compress&cs=tinysrgb&w=600" class="glightbox"><img src="https://images.pexels.com/photos/19604443/pexels-photo-19604443/free-photo-of-red-flowerpot-hanging-on-a-wire.jpeg?auto=compress&cs=tinysrgb&w=600" class="menu-img img-fluid" alt=""></a>
+                <h4>Small Hanging Pots</h4>
+                <p class="price">
+                  Rs.259
+                </p>
+              </div><!-- Menu Item -->
+
+              <div class="col-lg-4 menu-item">
+                <a href="https://images.pexels.com/photos/6508404/pexels-photo-6508404.jpeg?auto=compress&cs=tinysrgb&w=600" class="glightbox"><img src="https://images.pexels.com/photos/6508404/pexels-photo-6508404.jpeg?auto=compress&cs=tinysrgb&w=600" class="menu-img img-fluid" alt=""></a>
+                <h4>Water Spray</h4>
+                <p class="price">
+                  Rs. 349
+                </p>
+              </div><!-- Menu Item -->
+
+              <div class="col-lg-4 menu-item">
+                <a href="https://cdn.pixabay.com/photo/2015/05/12/12/28/plant-763965_640.jpg" class="glightbox"><img src="https://cdn.pixabay.com/photo/2015/05/12/12/28/plant-763965_640.jpg" class="menu-img img-fluid" alt=""></a>
+                <h4>Pots</h4>
+                <p class="price">
+                  Rs.299
+                </p>
+              </div><!-- Menu Item -->
+
+              <div class="col-lg-4 menu-item">
+                <a href="https://images.pexels.com/photos/4750384/pexels-photo-4750384.jpeg?auto=compress&cs=tinysrgb&w=600" class="glightbox"><img src="https://images.pexels.com/photos/4750384/pexels-photo-4750384.jpeg?auto=compress&cs=tinysrgb&w=600" class="menu-img img-fluid" alt=""></a>
+                <h4>Gardening Seeds</h4>
+                <p class="price">
+                  Rs.149/gm
+                </p>
+              </div><!-- Menu Item -->
+
+              <div class="col-lg-4 menu-item">
+                <a href="https://images.pexels.com/photos/3971211/pexels-photo-3971211.jpeg?auto=compress&cs=tinysrgb&w=600" class="glightbox"><img src="https://images.pexels.com/photos/3971211/pexels-photo-3971211.jpeg?auto=compress&cs=tinysrgb&w=600" class="menu-img img-fluid" alt=""></a>
+                <h4>Farming Tool</h4>
+                <p class="price">
+                  Rs.499
+                </p>
+              </div><!-- Menu Item -->
+
+            </div>
+          </div><!-- End Starter Menu Content -->
+
+        </div>
+    </section><!-- End Menu Section -->
+
+    <!-- ======= Testimonials Section ======= -->
+    <section id="testimonials" class="testimonials section-bg">
+      <div class="container" data-aos="fade-up">
+
+        <div class="section-header">
+          <h2>Testimonials</h2>
+          <p>What Are They <span>Saying About Us</span></p>
+        </div>
+
+        <div class="slides-1 swiper" data-aos="fade-up" data-aos-delay="100">
+          <div class="swiper-wrapper">
+
+            <div class="swiper-slide">
+              <div class="testimonial-item">
+                <div class="row gy-4 justify-content-center">
+                  <div class="col-lg-6">
+                    <div class="testimonial-content">
+                      <p>
+                        <i class="bi bi-quote quote-icon-left"></i>
+                        She is also a mentor for thesis students working with food issues in their design projects. These thesis projects have included an urban farm, a slow food cooking school, a greenhouse and market complex under an elevated highway, and a cooperative housing complex with a community garden. She is a co-curator for the exhibit Carrot City: Designing for Urban Agriculture (www.Toronto Metropolitan University.ca/carrotcity) and a co-author of the book Carrot City.
+                        <i class="bi bi-quote quote-icon-right"></i>
+                      </p>
+                      <h3>June Komisar</h3>
+                      <h4>Creativity in Architecture</h4>
+                      <div class="stars">
+                        <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-lg-2 text-center">
+                    <img src="https://network.expertisefinder.com/expert-profile-photo/june-komisar" class="img-fluid testimonial-img" alt="">
+                  </div>
+                </div>
+              </div>
+            </div><!-- End testimonial item -->
+
+            <div class="swiper-slide">
+              <div class="testimonial-item">
+                <div class="row gy-4 justify-content-center">
+                  <div class="col-lg-6">
+                    <div class="testimonial-content">
+                      <p>
+                        <i class="bi bi-quote quote-icon-left"></i>
+                        he has a background in landscape architecture, rural planning and development, and cultural geography. She has had a design practice for over 20 years and has worked as a county planner. Since 2002, she has been a full-time faculty member at the University of Guelph. In 2007, she was the recipient of the OAC Distinguished Professor Award. 
+                        <i class="bi bi-quote quote-icon-right"></i>
+                      </p>
+                      <h3>Karen Landman</h3>
+                      <h4>Green Infrastructure</h4>
+                      <div class="stars">
+                        <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-lg-2 text-center">
+                    <img src="https://network.expertisefinder.com/expert-profile-photo/karen-landman" class="img-fluid testimonial-img" alt="">
+                  </div>
+                </div>
+              </div>
+            </div><!-- End testimonial item -->
+
+            <div class="swiper-slide">
+              <div class="testimonial-item">
+                <div class="row gy-4 justify-content-center">
+                  <div class="col-lg-6">
+                    <div class="testimonial-content">
+                      <p>
+                        <i class="bi bi-quote quote-icon-left"></i>
+                        The primary focus of Dr Patel’s current research has been sociocultural and ecological impacts of agrarian and climate change on small-scale agriculture and indigenous communities in the Global South. It includes loss of agricultural biodiversity and associated indigenous knowledge, change in food consumption and its consequences on nutrition security, rural-urban migration for seeking livelihood, and participatory technology development to promote cultivation and consumption of climate change-resilient indigenous crops, such as small millets.
+                        <i class="bi bi-quote quote-icon-right"></i>
+                      </p>
+                      <h3>Kiit Patel</h3>
+                      <h4>Agrobiodiversity</h4>
+                      <div class="stars">
+                        <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-lg-2 text-center">
+                    <img src="https://network.expertisefinder.com/expert-profile-photo/kiit-patel" class="img-fluid testimonial-img" alt="">
+                  </div>
+                </div>
+              </div>
+            </div><!-- End testimonial item -->
+
+            <div class="swiper-slide">
+              <div class="testimonial-item">
+                <div class="row gy-4 justify-content-center">
+                  <div class="col-lg-6">
+                    <div class="testimonial-content">
+                      <p>
+                        <i class="bi bi-quote quote-icon-left"></i>
+                        He founded and directs P-REX, The Project for Reclamation Excellence, a multi-disciplinary research effort at MIT focusing on the design and reuse of waste landscapes worldwide. His work emphasizes the link between our consumption of natural resources, and the waste and destruction of landscape, to help us better understand how to proceed with redesigning our wasteful places for future productive uses and more intelligent outcomes.
+                        <i class="bi bi-quote quote-icon-right"></i>
+                      </p>
+                      <h3>Alan Berger</h3>
+                      <h4>Urban design</h4>
+                      <div class="stars">
+                        <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-lg-2 text-center">
+                    <img src="https://network.expertisefinder.com/expert-profile-photo/alan-berger" class="img-fluid testimonial-img" alt="">
+                  </div>
+                </div>
+              </div>
+            </div><!-- End testimonial item -->
+
+          </div>
+          <div class="swiper-pagination"></div>
+        </div>
+
+      </div>
+    </section><!-- End Testimonials Section -->
+
+        </div>
+
+      </div>
+    </section><!-- End Book A Table Section -->
+
+    <!-- ======= Gallery Section ======= -->
+    <section id="gallery" class="gallery section-bg">
+      <div class="container" data-aos="fade-up">
+
+        <div class="section-header">
+          <h2>gallery</h2>
+          <p>Check Our <span>Farming Gallery</span></p>
+        </div>
+
+        <div class="gallery-slider swiper">
+          <div class="swiper-wrapper align-items-center">
+            <div class="swiper-slide"><a class="glightbox" data-gallery="images-gallery" href="https://cdn.pixabay.com/photo/2016/09/21/04/46/barley-field-1684052_1280.jpg"><img src="https://cdn.pixabay.com/photo/2016/09/21/04/46/barley-field-1684052_1280.jpg" class="img-fluid" alt=""></a></div>
+            <div class="swiper-slide"><a class="glightbox" data-gallery="images-gallery" href="https://cdn.pixabay.com/photo/2016/08/01/17/08/tomatoes-1561565_640.jpg"><img src="https://cdn.pixabay.com/photo/2016/08/01/17/08/tomatoes-1561565_640.jpg" class="img-fluid" alt=""></a></div>
+            <div class="swiper-slide"><a class="glightbox" data-gallery="images-gallery" href="https://cdn.pixabay.com/photo/2017/07/30/23/59/garlic-2556022_1280.jpg"><img src="https://cdn.pixabay.com/photo/2017/07/30/23/59/garlic-2556022_1280.jpg" class="img-fluid" alt=""></a></div>
+            <div class="swiper-slide"><a class="glightbox" data-gallery="images-gallery" href="http://surl.li/rzuiw"><img src="http://surl.li/rzuiw" class="img-fluid" alt=""></a></div>
+            <div class="swiper-slide"><a class="glightbox" data-gallery="images-gallery" href="https://cdn.pixabay.com/photo/2013/12/05/19/20/deadman-ranch-223775_640.jpg"><img src="https://cdn.pixabay.com/photo/2013/12/05/19/20/deadman-ranch-223775_640.jpg" class="img-fluid" alt=""></a></div>
+            <div class="swiper-slide"><a class="glightbox" data-gallery="images-gallery" href="https://images.pexels.com/photos/5230908/pexels-photo-5230908.jpeg?auto=compress&cs=tinysrgb&w=600"><img src="https://images.pexels.com/photos/5230908/pexels-photo-5230908.jpeg?auto=compress&cs=tinysrgb&w=600" class="img-fluid" alt=""></a></div>
+            <div class="swiper-slide"><a class="glightbox" data-gallery="images-gallery" href="https://images.pexels.com/photos/6231715/pexels-photo-6231715.jpeg?auto=compress&cs=tinysrgb&w=600"><img src="https://images.pexels.com/photos/6231715/pexels-photo-6231715.jpeg?auto=compress&cs=tinysrgb&w=600" class="img-fluid" alt=""></a></div>
+            <div class="swiper-slide"><a class="glightbox" data-gallery="images-gallery" href="https://images.pexels.com/photos/9721357/pexels-photo-9721357.jpeg?auto=compress&cs=tinysrgb&w=600"><img src="https://images.pexels.com/photos/9721357/pexels-photo-9721357.jpeg?auto=compress&cs=tinysrgb&w=600" class="img-fluid" alt=""></a></div>
+          </div>
+          <div class="swiper-pagination"></div>
+        </div>
+
+      </div>
+    </section><!-- End Gallery Section -->
+
+    
+  </main><!-- End #main -->
+
+  <!-- ======= Footer ======= -->
+  
+      </div>
+    </div>
+
+   
+  <!-- End Footer -->
+
+  <a href="#" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+  <div id="preloader"></div>
+
+  <!-- Vendor JS Files -->
+  <script src="/static/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="/static/vendor/aos/aos.js"></script>
+  <script src="/static/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="/static/vendor/purecounter/purecounter_vanilla.js"></script>
+  <script src="/static/vendor/swiper/swiper-bundle.min.js"></script>
+  <script src="/static/vendor/php-email-form/validate.js"></script>
+
+  <!-- Template Main JS File -->
+  <script src="/static/js/main.js"></script>
+  
+  {% block js %}
+    
+  {% endblock  %}
+    
+
+</body>
+
+</html>
